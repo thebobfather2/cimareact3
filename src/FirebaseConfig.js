@@ -1,14 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCwL4mYYGeuqjkYgktTr3fEp4MlUc7GTm4",
-  authDomain: "hamza-portfolio-f30ba.firebaseapp.com",
-  projectId: "hamza-portfolio-f30ba",
-  storageBucket: "hamza-portfolio-f30ba.appspot.com",
-  messagingSenderId: "526692752996",
-  appId: "1:526692752996:web:f17741db0f840ad5ee4971",
-  measurementId: "G-TWBJEEF714"
+  apiKey: "AIzaSyAfHwROmxtYmiV2AEVEh2zhw-Pmc7fBvT8",
+  authDomain: "cimadowndemo.firebaseapp.com",
+  projectId: "cimadowndemo",
+  storageBucket: "cimadowndemo.appspot.com",
+  messagingSenderId: "76577808138",
+  appId: "1:76577808138:web:c30eace30c35f38e97a4f3",
+  measurementId: "G-P11J0RK96F"
 };
 
 // Initialize Firebase

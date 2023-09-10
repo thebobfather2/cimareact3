@@ -1,6 +1,10 @@
 import {auth, provider} from './FirebaseConfig';
 import {useState} from 'react';
 import { signInWithPopup } from 'firebase/auth';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Forums from './Forums';
+
+
 
 function App() {
 
@@ -21,8 +25,9 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
-      <div className='box'>
+    <Router>
+      <div className="wrapper">
+        <div className='box'>
           {user?(
             <>
               <button className='btn btn-secondary btn-md'
@@ -34,6 +39,10 @@ function App() {
               <div className='photo'>
                 <img src={user.photoURL} alt="dp" referrerPolicy='no-referrer'/>
               </div>
+                   {/* Add a link to the FORUMS page */}
+                   <Link to="/forums" className='btn btn-primary btn-md'>
+                Go to FORUMS
+              </Link>
             </>
           ):(
             <button className='btn btn-danger btn-md'
@@ -42,7 +51,13 @@ function App() {
             </button>  
           )} 
       </div>
-    </div>
+
+        {/* Define the routes */}
+        <Routes> {/* Replace Switch with Routes */}
+          <Route path="/forums" element={<Forums />} /> {/* Use element prop */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
